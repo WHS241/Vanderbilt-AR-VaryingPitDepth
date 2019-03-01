@@ -30,14 +30,17 @@ public class Ditch : GapAffordance
     {
         createMesh();
 
+        // add small epsilon to ensure occlusion along sides of gap 
+        float epsilon = 0.2f;  // 
+
         hideVert = new Vector3[]
         {
             new Vector3(-length/2, 0, -width / 2), new Vector3(-length/2, 0, width / 2),
             new Vector3(length/2, 0, width / 2), new Vector3(length/2, 0, -width / 2),
-            new Vector3(-length/2 - 0.02f, 0, -width / 2 - 0.02f), new Vector3(-length/2 - 0.02f, 0, width / 2 + 0.02f),
-            new Vector3(length/2 + 0.02f, 0, width / 2 + 0.02f), new Vector3(length/2 + 0.02f, 0, -width / 2 - 0.02f),
-            new Vector3(-length/2 - 0.02f, -vertical, -width / 2 - 0.02f), new Vector3(-length/2 - 0.02f,  -vertical, width / 2 + 0.02f),
-            new Vector3(length/2 + 0.02f, -vertical, width / 2 + 0.02f), new Vector3(length/2 + 0.02f,  -vertical, -width / 2 - 0.02f),
+            new Vector3(-length/2 - epsilon, 0, -width / 2 - epsilon), new Vector3(-length/2 - epsilon, 0, width / 2 + epsilon),
+            new Vector3(length/2 + epsilon, 0, width / 2 + epsilon), new Vector3(length/2 + epsilon, 0, -width / 2 - epsilon),
+            new Vector3(-length/2 - epsilon, -vertical, -width / 2 - epsilon), new Vector3(-length/2 - epsilon,  -vertical, width / 2 + epsilon),
+            new Vector3(length/2 + epsilon, -vertical, width / 2  +epsilon), new Vector3(length/2 + epsilon,  -vertical, -width / 2 - epsilon),
         };
 
         hideTriangles = new int[]
