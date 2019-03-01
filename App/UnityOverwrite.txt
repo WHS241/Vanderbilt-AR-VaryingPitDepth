@@ -5,17 +5,18 @@
 # Write a line equal to 'overwrite-all' (without quotes) to overwrite everything (preserved accross builds)
 # Write a line equal to 'keep-all' (without quotes) to keep files regardless their modification (preserved accross builds)
 # Default behavior is to never overwrite files
-WHSStudy2.sln: E9D7519C16466D6A2AB2542DB9F141F7
+WHSStudy2.sln: modified
 GeneratedProjects\UWP\Assembly-CSharp\project.json: 1D02BC64BAC0D041019673A1C4C51737
 WHSStudy2\App.cs: 0B1A16D9B1879F822D3C9817739C3187
 WHSStudy2\Package.appxmanifest: 458D3178B2F0EF3CBE5BEB240DC8CC55
 WHSStudy2\project.json: 1D02BC64BAC0D041019673A1C4C51737
-WHSStudy2\WHSStudy2.csproj: 583B0B4F84358ED6B38DF7A73D7EEB3B
-WHSStudy2\WHSStudy2.csproj.user: BEFB8AC4886C4CFDD3C68445D6F19B04
+WHSStudy2\WHSStudy2.csproj: 0E3020D3558C9105D0F9800F9E4CEF0B
+WHSStudy2\WHSStudy2.csproj.user: modified
 WHSStudy2\Assets\SplashScreen.scale-200.png: A85C1D7624B6902CF8CEBD6F0200A826
 WHSStudy2\Assets\Square150x150Logo.scale-200.png: E02834B4A5DFB97FF8E212C1CACBB084
 WHSStudy2\Assets\Square44x44Logo.scale-200.png: 6C6EF27184ABE9D870A9D564953775DE
 WHSStudy2\Assets\Square44x44Logo.targetsize-24_altform-unplated.png: 156637F7B5363E983E7A46D8E533A23D
 WHSStudy2\Assets\StoreLogo.png: 90BD194CA4A7CFFF3E8B8222229857FB
 WHSStudy2\Assets\Wide310x150Logo.scale-200.png: C96846A80DF667F87355569CD816192D
+WHSStudy2\obj\x86\Release\WHSStudy2.csproj.CopyComplete: D41D8CD98F00B204E9800998ECF8427E
 WHSStudy2\Properties\Default.rd.xml: 72EB282657164E79A1C42F6240984826
