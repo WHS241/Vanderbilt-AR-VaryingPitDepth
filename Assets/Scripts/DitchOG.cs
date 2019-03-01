@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ditch : GapAffordance
+public class DitchOG : GapAffordance
 {
     protected static readonly int[] TRIANGLES =
        {
@@ -30,17 +30,14 @@ public class Ditch : GapAffordance
     {
         createMesh();
 
-        // add small epsilon to ensure occlusion along sides of gap 
-        float epsilon = 0.2f;  // 
-
         hideVert = new Vector3[]
         {
             new Vector3(-length/2, 0, -width / 2), new Vector3(-length/2, 0, width / 2),
             new Vector3(length/2, 0, width / 2), new Vector3(length/2, 0, -width / 2),
-            new Vector3(-length/2 - epsilon, 0, -width / 2 - epsilon), new Vector3(-length/2 - epsilon, 0, width / 2 + epsilon),
-            new Vector3(length/2 + epsilon, 0, width / 2 + epsilon), new Vector3(length/2 + epsilon, 0, -width / 2 - epsilon),
-            new Vector3(-length/2 - epsilon, -vertical, -width / 2 - epsilon), new Vector3(-length/2 - epsilon,  -vertical, width / 2 + epsilon),
-            new Vector3(length/2 + epsilon, -vertical, width / 2  +epsilon), new Vector3(length/2 + epsilon,  -vertical, -width / 2 - epsilon),
+            new Vector3(-length/2 - 0.02f, 0, -width / 2 - 0.02f), new Vector3(-length/2 - 0.02f, 0, width / 2 + 0.02f),
+            new Vector3(length/2 + 0.02f, 0, width / 2 + 0.02f), new Vector3(length/2 + 0.02f, 0, -width / 2 - 0.02f),
+            new Vector3(-length/2 - 0.02f, -vertical, -width / 2 - 0.02f), new Vector3(-length/2 - 0.02f,  -vertical, width / 2 + 0.02f),
+            new Vector3(length/2 + 0.02f, -vertical, width / 2 + 0.02f), new Vector3(length/2 + 0.02f,  -vertical, -width / 2 - 0.02f),
         };
 
         hideTriangles = new int[]
@@ -64,7 +61,7 @@ public class Ditch : GapAffordance
         mesh.RecalculateBounds();
         mesh.RecalculateNormals();
 
-        if(transform.parent != null)
+        if (transform.parent != null)
         {
             transform.localPosition = new Vector3(0, 0, width / 2);
             transform.localRotation = Quaternion.identity;
@@ -73,7 +70,7 @@ public class Ditch : GapAffordance
 
     protected override Vector3[] generateVertices()
     {
-        
+
         Vector3[] finalResult = new Vector3[34];
         for (int i = 0; i < 17; ++i)
         {
